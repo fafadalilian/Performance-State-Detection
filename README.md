@@ -25,7 +25,7 @@ Two-dimensional Convolutional Neural Networks (CNNs) were used to analyze the se
 
 ### 6. Modality Fusion
 Three fusion strategies—early fusion, middle fusion, and late fusion—were examined to integrate information from EEG, eye tracking, and behavioral data. Early fusion combines data from various sources at the beginning of the data processing pipeline, middle fusion merges features after initial processing, and late fusion combines outputs from individual models.
-![Modality Fusion Strategies](graphs/fusion.JPG)
+![Modality Fusion Strategies](graph/fusion.JPG)
 
 ### 7. Hyperparameter Optimization
 Optuna, a python hyperparameter optimization library, was used to tune the model's hyperparameters. The Sequential Model-Based Optimization (SMBO) algorithm was employed to maximize the average Matthews Correlation Coefficient (MCC) score across 1000 trial runs.
