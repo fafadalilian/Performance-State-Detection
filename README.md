@@ -33,7 +33,14 @@ Optuna, a python hyperparameter optimization library, was used to tune the model
 ### 8. Model Evaluation
 The effectiveness of the models was evaluated based on hit detection rate and miss detection rate. Nondominated models, which offer the best balance between these metrics, were identified and compared across each fusion strategy.
 
-## Usage
+## Results
+The paired t-tests demonstrated that the middle fusion model with the highest Matthews Correlation Coefficient (MCC) significantly outperformed both the early fusion and late fusion (eye tracking) models with the highest MCC:
+
+Middle Fusion > Early Fusion: p = 0.001
+Middle Fusion > Late Fusion (Eye Tracking): p = 0.047
+This indicates that integrating data from each sensor at the feature level, as implemented in the middle fusion approach, is more effective for extracting crucial information and improving classification accuracy.
+
+Despite the improved performance of the middle fusion model, using fewer sensors, like relying solely on eye-tracking data, offers practical advantages. A reduced sensor setup is more cost-effective, simpler to deploy, and easier to maintain. This balance between predictive accuracy and practicality makes eye-tracking data a viable alternative for suboptimal state detection systems, especially in scenarios where streamlined and less intrusive solutions are preferred.
 
 ### Prerequisites
 - Python 3.7+
@@ -67,7 +74,6 @@ The effectiveness of the models was evaluated based on hit detection rate and mi
     python train_optimize_cnn_middlefusion.py
     ```
 
-## Results
 
 
 ## Contributions
